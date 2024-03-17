@@ -1,38 +1,71 @@
-# create-svelte
+# Mozambique
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Frontend for the mozambique app. 
 
-## Creating a project
+> [!CAUTION]
+> Mozambique is still in Development. You will find bugs and broken/unfinished features.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## ✨ Installation and Configuration
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Installation for Development
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. clone the repository:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+git clone https://github.com/comcrops/mozambique-client.git
 ```
 
-## Building
-
-To create a production version of your app:
+2. install packages
 
 ```bash
-npm run build
+pnpm i 
 ```
 
-You can preview the production build with `npm run preview`.
+> [!TIP]  
+> If you don't have pnpm installed, checkout https://pnpm.io/installation to install for your operating system.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+3. run dev server
+
+```bash
+pnpm run dev
+```
+
+4. Head to http://localhost:5173/
+
+## 🚀 Deployment
+
+1. run build
+
+```bash
+pnpm run build
+```
+
+2. check if everything works as it should
+
+```bash
+pnpm run preview
+```
+
+3. Head to http://localhost:4173/
+4. All generated assets can be found in `./svelte-kit/output`
+
+## 🍎 Authors
+
+- [@Dino Kupinic](https://www.github.com/Dino-Kupinic)
+- [@Stefan Prechtl](https://www.github.com/s-prechtl)
+
+## 🦄 Team Organization:
+
+### Frontend
+
+- Dino Kupinic
+
+### Backend
+
+- Stefan Prechtl
+
+## 🛠️ Tech Stack
+
+- SvelteKit
+- Go
+- PostgreSQL

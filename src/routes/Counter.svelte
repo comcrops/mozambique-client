@@ -9,13 +9,17 @@
   $: offset = modulo($displayed_count, 1)
 
   function modulo(n: number, m: number) {
-    // handle negative numbers
     return ((n % m) + m) % m
+  }
+
+  function decrease() {
+    count -= 1
+    if (count < 0) count = 0
   }
 </script>
 
 <div class="counter">
-  <button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">
+  <button on:click={() => decrease()} aria-label="Decrease the counter by one">
     <svg aria-hidden="true" viewBox="0 0 1 1">
       <path d="M0,0.5 L1,0.5"/>
     </svg>
@@ -35,9 +39,14 @@
   </button>
 </div>
 
-<Button variant="destructive" on:click={() => (count = 0)} class="w-24 mt-6" aria-label="Reset the counter to 0">
-  Reset
-</Button>
+<div class="flex align-center gap-2 mt-6">
+  <Button variant="destructive" on:click={() => (count = 0)} class="w-24" aria-label="Reset the counter to 0">
+    Reset
+  </Button>
+  <Button>
+    Logout
+  </Button>
+</div>
 
 <style>
   .counter {
